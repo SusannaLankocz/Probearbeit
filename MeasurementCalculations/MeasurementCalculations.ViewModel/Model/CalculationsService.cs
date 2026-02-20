@@ -1,9 +1,12 @@
-﻿using System.Windows.Documents;
+﻿using System.Data;
+using System.Windows.Documents;
 
 namespace MeasurementCalculations.ViewModel.Model
 {
     public class CalculationsService
     {
+        private const int SignificantFigures = 4;
+
         public double CalculateStandardDeviation(List<double> yValues)
         {
             if (yValues == null || yValues.Count == 0)
@@ -75,7 +78,35 @@ namespace MeasurementCalculations.ViewModel.Model
 
                 secondDerivatives.Add(new DerivativePoint(dataPoints[i].X, secondDerivative));
             }
+
             return secondDerivatives;
+        }
+
+        private double RoundToSignificantFigures(double value)
+        {
+            if (value == 0)
+                return 0;
+
+            int decimalPlaces = SignificantFigures - (int)Math.Floor(Math.Log10(Math.Abs(value))) - 1;
+            decimalPlaces = Math.Max(0, Math.Min(15, decimalPlaces));
+
+            return Math.Round(value, decimalPlaces, MidpointRounding.AwayFromZero);
+        }
+
+
+        public List<double> RoundYValues(List<double> yValues)
+        {
+            if (yValues == null || yValues.Count == 0)
+                return new List<double>();
+
+            var roundedYValues = new List<double>();
+
+            foreach (var y in yValues)
+            {
+                roundedYValues.Add(RoundToSignificantFigures(y));
+            }
+
+            return roundedYValues;
         }
     }
 }

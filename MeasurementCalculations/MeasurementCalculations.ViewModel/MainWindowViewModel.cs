@@ -25,6 +25,9 @@ namespace MeasurementCalculations.ViewModel
 
         [ObservableProperty]
         private ObservableCollection<DerivativePoint> _secondDerivativeDataList = new ObservableCollection<DerivativePoint>();
+        
+        [ObservableProperty]
+        private ObservableCollection<double> _roundedSignificantFiguresYValues = new ObservableCollection<double>();
 
         public MainWindowViewModel(FileService fileService, CalculationsService calculationsService)
         {
@@ -60,7 +63,17 @@ namespace MeasurementCalculations.ViewModel
             var yValues = MeasurementDataList.Select(dp => dp.Y).ToList();
             MeanYValues = _calculationsService.CalculateMean(yValues);
             StandardDeviationYValues = _calculationsService.CalculateStandardDeviation(yValues);
+            
             GetDerivatives();
+            GetRoundedSignificantFiguresYValues(yValues);
+        }
+
+        private void GetRoundedSignificantFiguresYValues(List<double> yValues)
+        {
+            RoundedSignificantFiguresYValues.Clear();
+            var roundedValues = _calculationsService.RoundYValues(yValues);
+            foreach (var roundedY in roundedValues)
+                RoundedSignificantFiguresYValues.Add(roundedY);
         }
 
         private void GetDerivatives()
