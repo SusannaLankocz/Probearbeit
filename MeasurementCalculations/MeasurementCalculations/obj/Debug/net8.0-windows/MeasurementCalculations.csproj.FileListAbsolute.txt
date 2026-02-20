@@ -17,6 +17,7 @@ C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalcu
 C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations\obj\Debug\net8.0-windows\MeasurementCalculations.AssemblyInfoInputs.cache
 C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations\obj\Debug\net8.0-windows\MeasurementCalculations.AssemblyInfo.cs
 C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations\obj\Debug\net8.0-windows\MeasurementCalculations.csproj.CoreCompileInputs.cache
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations\obj\Debug\net8.0-windows\MeasurementCalculations.sourcelink.json
 C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations\obj\Debug\net8.0-windows\Measurem.D9BBCE06.Up2Date
 C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations\obj\Debug\net8.0-windows\MeasurementCalculations.dll
 C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations\obj\Debug\net8.0-windows\refint\MeasurementCalculations.dll

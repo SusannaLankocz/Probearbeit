@@ -29,7 +29,10 @@
         },
         "runtime": {
           "bin/placeholder/MeasurementCalculations.ViewModel.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },

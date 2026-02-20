@@ -1,12 +1,6 @@
-C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\bin\Debug\net8.0\MeasurementCalculations.ViewModel.deps.json
-C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\bin\Debug\net8.0\MeasurementCalculations.ViewModel.dll
-C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\bin\Debug\net8.0\MeasurementCalculations.ViewModel.pdb
 C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0\MeasurementCalculations.ViewModel.csproj.AssemblyReference.cache
 C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0\MeasurementCalculations.ViewModel.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0\MeasurementCalculations.ViewModel.AssemblyInfoInputs.cache
 C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0\MeasurementCalculations.ViewModel.AssemblyInfo.cs
 C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0\MeasurementCalculations.ViewModel.csproj.CoreCompileInputs.cache
-C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0\MeasurementCalculations.ViewModel.dll
-C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0\refint\MeasurementCalculations.ViewModel.dll
-C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0\MeasurementCalculations.ViewModel.pdb
-C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0\ref\MeasurementCalculations.ViewModel.dll
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0\MeasurementCalculations.ViewModel.sourcelink.json

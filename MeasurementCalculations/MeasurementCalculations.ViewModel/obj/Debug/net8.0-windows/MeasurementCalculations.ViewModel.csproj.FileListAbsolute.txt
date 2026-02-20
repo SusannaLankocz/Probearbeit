@@ -1,0 +1,13 @@
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\bin\Debug\net8.0-windows\MeasurementCalculations.ViewModel.deps.json
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\bin\Debug\net8.0-windows\MeasurementCalculations.ViewModel.dll
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\bin\Debug\net8.0-windows\MeasurementCalculations.ViewModel.pdb
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0-windows\MeasurementCalculations.ViewModel.csproj.AssemblyReference.cache
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0-windows\MeasurementCalculations.ViewModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0-windows\MeasurementCalculations.ViewModel.AssemblyInfoInputs.cache
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0-windows\MeasurementCalculations.ViewModel.AssemblyInfo.cs
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0-windows\MeasurementCalculations.ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0-windows\MeasurementCalculations.ViewModel.sourcelink.json
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0-windows\MeasurementCalculations.ViewModel.dll
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0-windows\refint\MeasurementCalculations.ViewModel.dll
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0-windows\MeasurementCalculations.ViewModel.pdb
+C:\Users\susan\source\repos\Probearbeit\MeasurementCalculations\MeasurementCalculations.ViewModel\obj\Debug\net8.0-windows\ref\MeasurementCalculations.ViewModel.dll
