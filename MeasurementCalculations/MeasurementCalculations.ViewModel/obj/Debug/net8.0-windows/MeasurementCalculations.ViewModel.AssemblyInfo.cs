@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeasurementCalculations.ViewModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+988c192a7e60006d0efc243d6e24fb184d27bffe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ccfa220ef023e4789b3a5a5ca8c532e83cf5da3")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeasurementCalculations.ViewModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeasurementCalculations.ViewModel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

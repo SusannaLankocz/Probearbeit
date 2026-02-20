@@ -11,8 +11,9 @@ namespace MeasurementCalculations
             InitializeComponent();
 
             var fileService = new FileService();
+            var calculationsService = new CalculationsService();
 
-            DataContext = new MainWindowViewModel(fileService);
+            DataContext = new MainWindowViewModel(fileService, calculationsService);
         }
     }
 }
