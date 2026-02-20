@@ -1,7 +1,8 @@
-﻿using System.Data;
+﻿using MeasurementCalculations.ViewModel.Model;
+using System.Data;
 using System.Windows.Documents;
 
-namespace MeasurementCalculations.ViewModel.Model
+namespace MeasurementCalculations.ViewModel.Services
 {
     public class CalculationsService
     {

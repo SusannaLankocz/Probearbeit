@@ -7,13 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1200">
     <Grid>
+        <!--Header-->
         <TextBlock Text="Hello Postnova!"/>
-        <Button Content="Please select data file 'data.txt':"
-                    Width="200"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    Height="50"
-                    Command="{Binding LoadFileCommand}"/>
+        <Button Content="Please select data file 'data.txt'"
+                Width="200"
+                HorizontalAlignment="Center"
+                BorderBrush="Transparent"
+                Background="CornflowerBlue"
+                VerticalAlignment="Top"
+                Height="50"
+                Command="{Binding LoadFileCommand}"/>
+        <!-- 1A) measurement data display from text file-->
         <StackPanel Orientation="Horizontal"
                     Margin="0,50,0,0">
             <StackPanel Orientation="Vertical"
@@ -21,10 +25,10 @@
                         VerticalAlignment="Top">
 
                 <TextBlock Text="1A) Raw data from file:"
-                   Margin="0,30,0,0"
-                   FontWeight="Bold"/>
+                           Margin="0,30,0,0"
+                           FontWeight="Bold"/>
 
-                <ListView ItemsSource="{Binding MeasurementDataList}"
+                <ListView ItemsSource="{Binding MeasurementData}"
                           BorderBrush="Transparent"
                           Margin="0,10,0,0"
                           Width="250"
@@ -41,6 +45,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </StackPanel>
+            <!-- 1B) Statistics -->
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="1B) Standard deviation y-values: "
@@ -54,12 +59,13 @@
                     <TextBlock Text="{Binding MeanYValues}"
                                Margin="10,30,0,0"/>
                 </StackPanel>
+                <!-- 1C) Derivatives Section -->
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="1C) First derivatives (dy/dx): "
                                Margin="30,30,0,0"
                                FontWeight="Bold"/>
-                        <ListView ItemsSource="{Binding FirstDerivativeDataList}" 
+                        <ListView ItemsSource="{Binding FirstDerivativeData}" 
                               HorizontalAlignment="Left"
                               BorderBrush="Transparent"
                               Margin="30,10,0,0"
@@ -78,7 +84,7 @@
                         <TextBlock Text="1C) Second derivatives: "
                                Margin="30,30,0,0"
                                FontWeight="Bold"/>
-                        <ListView ItemsSource="{Binding SecondDerivativeDataList}" 
+                        <ListView ItemsSource="{Binding SecondDerivativeData}" 
                               HorizontalAlignment="Left"
                               BorderBrush="Transparent"
                               Margin="30,10,0,0"
@@ -93,6 +99,7 @@
                             </ListView.ItemTemplate>
                         </ListView>
                     </StackPanel>
+                    <!-- 1D) Rounded Values -->
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="1D) Rounded significant figures (y-values): "
                                    Margin="30,30,0,0"
@@ -110,6 +117,46 @@
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="{Binding .}" Width="200"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                    <!--2B) File properties section-->
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="2B) Files properties: "
+                                   Margin="30,30,0,0"
+                                   Width="200"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Left"
+                                   FontWeight="Bold"/>
+                        <ListView ItemsSource="{Binding FilePropertiesData}" 
+                                  HorizontalAlignment="Left"
+                                  BorderBrush="Transparent"
+                                  Margin="30,10,0,0"
+                                  Width="250"
+                                  Height="400">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="FileName: " FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding FileName}" Width="80"/>
+                                        <TextBlock Text="FullPath: " FontWeight="Bold" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{Binding FullPath}" Width="80"/>
+                                        <TextBlock Text="Extension: " FontWeight="Bold" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{Binding Extension}" Width="80"/>
+                                        <TextBlock Text="SizeInBytes: " FontWeight="Bold" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{Binding SizeInBytes}" Width="80"/>
+                                        <TextBlock Text="CreationTime: " FontWeight="Bold" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{Binding CreationTime}" Width="80"/>
+                                        <TextBlock Text="LastModifiedTime: " FontWeight="Bold" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{Binding LastModifiedTime}" Width="80"/>
+                                        <TextBlock Text="LastAccessTime: " FontWeight="Bold" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{Binding LastAccessTime}" Width="80"/>
+                                        <TextBlock Text="IsReadOnly: " FontWeight="Bold" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{Binding IsReadOnly}" Width="80"/>
+                                        <TextBlock Text="DirectoryName: " FontWeight="Bold" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{Binding DirectoryName}" Width="80"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>

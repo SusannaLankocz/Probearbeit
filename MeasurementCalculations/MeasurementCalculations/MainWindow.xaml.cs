@@ -1,5 +1,5 @@
 ﻿using MeasurementCalculations.ViewModel;
-using MeasurementCalculations.ViewModel.Model;
+using MeasurementCalculations.ViewModel.Services;
 using System.Windows;
 
 namespace MeasurementCalculations
