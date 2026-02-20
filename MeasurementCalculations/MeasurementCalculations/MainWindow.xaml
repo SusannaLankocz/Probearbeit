@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MeasurementCalculations"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="MainWindow" Height="600" Width="1000">
     <Grid>
         <TextBlock Text="Hello Postnova!"/>
         <Button Content="Please select data file:"
@@ -26,7 +26,7 @@
                 <ListView ItemsSource="{Binding MeasurementDataList}"
                   BorderBrush="Transparent"
                   Margin="0,10,0,0"
-                  Width="300"
+                  Width="250"
                   Height="500">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -41,38 +41,59 @@
                 </ListView>
             </StackPanel>
             <StackPanel Orientation="Vertical">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Standard deviation y-values: "
-                           Margin="30,30,0,0"
-                           FontWeight="Bold"/>
-                <TextBlock Text="{Binding StandardDeviationYValues}"
-                           Margin="30,30,0,0"/>
-                <TextBlock Text="Mean y-values: "
-                           Margin="30,30,0,0"
-                           FontWeight="Bold"/>
-                <TextBlock Text="{Binding MeanYValues}"
-                           Margin="30,30,0,0"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Standard deviation y-values: "
+                               Margin="30,30,0,0"
+                               FontWeight="Bold"/>
+                    <TextBlock Text="{Binding StandardDeviationYValues}"
+                               Margin="10,30,0,0"/>
+                    <TextBlock Text="Mean y-values: "
+                               Margin="30,30,0,0"
+                               FontWeight="Bold"/>
+                    <TextBlock Text="{Binding MeanYValues}"
+                               Margin="10,30,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="First derivatives (dy/dx): "
+                               Margin="30,30,0,0"
+                               FontWeight="Bold"/>
+                        <ListView ItemsSource="{Binding FirstDerivativeDataList}" 
+                              HorizontalAlignment="Left"
+                              BorderBrush="Transparent"
+                              Margin="30,10,0,0"
+                              Width="200"
+                              Height="500">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Derivative}" Width="200"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Second derivatives: "
+                               Margin="30,30,0,0"
+                               FontWeight="Bold"/>
+                        <ListView ItemsSource="{Binding SecondDerivativeDataList}" 
+                              HorizontalAlignment="Left"
+                              BorderBrush="Transparent"
+                              Margin="30,10,0,0"
+                              Width="200"
+                              Height="500">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Derivative}" Width="200"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
-            <StackPanel Orientation="Vertical">
-                    <TextBlock Text="First derivatives (dy/dx): "
-                           Margin="30,30,0,0"
-                           FontWeight="Bold"/>
-                <ListView ItemsSource="{Binding DerivativeDataList}" 
-                          HorizontalAlignment="Left"
-                          BorderBrush="Transparent"
-                          Margin="30,10,0,0"
-                          Width="200"
-                          Height="500">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding FirstDerivative}" Width="200"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackPanel>
-        </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

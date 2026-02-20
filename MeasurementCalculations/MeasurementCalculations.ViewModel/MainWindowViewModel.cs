@@ -21,7 +21,10 @@ namespace MeasurementCalculations.ViewModel
         private ObservableCollection<DataPoint> _measurementDataList = new ObservableCollection<DataPoint>();
 
         [ObservableProperty]
-        private ObservableCollection<DerivativePoint> _derivativeDataList = new ObservableCollection<DerivativePoint>();
+        private ObservableCollection<DerivativePoint> _firstDerivativeDataList = new ObservableCollection<DerivativePoint>();
+
+        [ObservableProperty]
+        private ObservableCollection<DerivativePoint> _secondDerivativeDataList = new ObservableCollection<DerivativePoint>();
 
         public MainWindowViewModel(FileService fileService, CalculationsService calculationsService)
         {
@@ -57,20 +60,20 @@ namespace MeasurementCalculations.ViewModel
             var yValues = MeasurementDataList.Select(dp => dp.Y).ToList();
             MeanYValues = _calculationsService.CalculateMean(yValues);
             StandardDeviationYValues = _calculationsService.CalculateStandardDeviation(yValues);
-            CalculateFirstDerivative();
+            GetDerivatives();
         }
 
-        private void CalculateFirstDerivative()
+        private void GetDerivatives()
         {
-            DerivativeDataList.Clear();
+            FirstDerivativeDataList.Clear();
+            var firstDerivatives = _calculationsService.CalculateFirstDerivative(MeasurementDataList.ToList());
+            foreach (var derivative in firstDerivatives)
+                FirstDerivativeDataList.Add(derivative);
 
-            if (MeasurementDataList.Count < 2)
-                return;
-
-            var derivatives = _calculationsService.CalculateFirstDerivative(MeasurementDataList.ToList());
-            
-            foreach (var derivative in derivatives)
-                DerivativeDataList.Add(derivative);
+            SecondDerivativeDataList.Clear();
+            var secDerivatives = _calculationsService.CalculateSecondDerivative(MeasurementDataList.ToList());          
+            foreach (var derivative in secDerivatives)
+                SecondDerivativeDataList.Add(derivative);
         }
     }
 }

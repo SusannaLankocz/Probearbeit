@@ -11,7 +11,7 @@ namespace MeasurementCalculations.ViewModel.Model
 
             double mean = CalculateMean(yValues);
             double sumOfSquares = yValues.Sum(yValue => Math.Pow(yValue - mean, 2));
-            
+
             return Math.Sqrt(sumOfSquares / yValues.Count);
         }
 
@@ -34,12 +34,12 @@ namespace MeasurementCalculations.ViewModel.Model
                               (dataPoints[1].X - dataPoints[0].X);
             derivatives.Add(new DerivativePoint(dataPoints[0].X, firstDeriv));
 
-            for (int i = 1; i < dataPoints.Count -1; i++)
+            for (int i = 1; i < dataPoints.Count - 1; i++)
             {
                 double deltaY = dataPoints[i + 1].Y - dataPoints[i - 1].Y;
                 double deltaX = dataPoints[i + 1].X - dataPoints[i - 1].X;
 
-                if (Math.Abs(deltaX) < double.Epsilon)
+                if (deltaX == 0)
                     continue;
 
                 double derivative = deltaY / deltaX;
@@ -53,5 +53,30 @@ namespace MeasurementCalculations.ViewModel.Model
 
             return derivatives;
         }
+
+        public List<DerivativePoint> CalculateSecondDerivative(List<DataPoint> dataPoints)
+        {
+            if (dataPoints == null || dataPoints.Count < 3)
+                return new List<DerivativePoint>();
+
+            var secondDerivatives = new List<DerivativePoint>();
+
+            for (int i = 1; i < dataPoints.Count - 1; i++)
+            {
+                double h1 = dataPoints[i].X - dataPoints[i - 1].X;     
+                double h2 = dataPoints[i + 1].X - dataPoints[i].X;    
+
+                if (h1 == 0 || h2 == 0)
+                    continue;
+
+                double secondDerivative = 2 / (h1 + h2) * (
+                    (dataPoints[i+1].Y - dataPoints[i].Y) / h2 -
+                    (dataPoints[i].Y - dataPoints[i-1].Y) / h1);
+
+                secondDerivatives.Add(new DerivativePoint(dataPoints[i].X, secondDerivative));
+            }
+            return secondDerivatives;
+        }
     }
 }
+
